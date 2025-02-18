@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - branch
 
 jobs:
   qodana:
@@ -22,5 +23,6 @@ jobs:
         uses: JetBrains/qodana-action@next
         with:
           pr-mode: true
+          args: --ide,QDJVM
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
