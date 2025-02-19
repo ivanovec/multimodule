@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - branch
 
 jobs:
   qodana:
@@ -19,8 +20,10 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
       - name: 'Qodana Scan'
-        uses: JetBrains/qodana-action@v2024.3
+        uses: JetBrains/qodana-action@efimov_test
         with:
           pr-mode: true
+          upload-result: true
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+          CLI_DIST: 243

@@ -6,8 +6,10 @@ version: "1.0"
 
 #Specify inspection profile for code analysis
 profile:
-  name: qodana.starter
+  name: qodana.recommended
 
+include:
+  - name: UnusedParameters
 #Enable inspections
 #include:
 #  - name: <SomeEnabledInspectionId>
