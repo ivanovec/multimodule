@@ -20,10 +20,11 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
       - name: 'Qodana Scan'
-        uses: JetBrains/qodana-action@next
+        uses: JetBrains/qodana-action@efimov_test
         with:
           pr-mode: true
           args: --ide,QDJVM
           upload-result: true
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+          CLI_DIST: qodana_linux_x86_64.tar.gz
