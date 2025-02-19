@@ -23,7 +23,6 @@ jobs:
         uses: JetBrains/qodana-action@efimov_test
         with:
           pr-mode: true
-          args: --ide,QDJVM
           upload-result: true
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
