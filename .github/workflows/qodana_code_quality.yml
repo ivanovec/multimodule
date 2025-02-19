@@ -27,4 +27,4 @@ jobs:
           upload-result: true
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
-          CLI_DIST: qodana_linux_x86_64.tar.gz
+          CLI_DIST: 243
